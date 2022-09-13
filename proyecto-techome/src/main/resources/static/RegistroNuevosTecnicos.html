@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro tecnicos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <img
+                src="imagenes/TecHomeLogo.png"
+                alt="Logo TecHome"
+            />
+        </figure>
+    </header>
+    <section style="margin: 1em;">
+        <div class = "container p-3" style="border: 2px solid rgb(119, 172, 247)">
+            <h1 style="text-align:center">Registro TecHomePro</h1>
+            <form>
+                <fieldset enabled>                                                               <!--Habilita los texts fields-->
+                  <legend>Ingrese la información requerida para solicitar ingreso.</legend>
+                    <div class="row g-3 align-items-center">
+                      <div class="col-md-6">
+                        <label for="pNombreTecHomePro" class="form-label">Primer Nombre</label>
+                        <input type="text" id="pNombreTecHomePro" class="form-control" placeholder="Ingrese nombre primer nombre" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="sNombreTecHomePro" class="form-label">Segundo Nombre</label>
+                        <input type="text" id="sNombreTecHomePro" class="form-control" placeholder="Ingrese segundo nombre">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="pApellidoTecHomePro" class="form-label">Primer Apellido</label>
+                        <input type="text" id="pApellidoTecHomePro" class="form-control" placeholder="Ingrese primer apellido" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="sApellidoTecHomePro" class="form-label">Segundo Apellido</label>
+                        <input type="text" id="sApellidoTecHomePro" class="form-control" placeholder="Ingrese segundo apellido">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="cedulaTecHomePro" class="form-label">Cedula</label>
+                        <input type="number" id="cedulaTecHomePro" class="form-control" placeholder="Ingrese número de cedula" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="celularTecHomePro" class="form-label">Número celular</label>
+                        <input type="number" id="celularTecHomePro" class="form-control" placeholder="Ingrese número celular sin espacios" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="razonSocialTecHomePro" class="form-label">Nombre razón comercial</label>
+                        <input type="text" id="razonSocialTecHomePro" class="form-control" placeholder="Ingrese la razón comercial de su negocio." required>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="ciudadTecHomePro" class="form-label">Ciudad</label>
+                        <select id="ciudadTecHomePro" class="form-select">
+                          <option>Bogota</option>
+                          <option>Bucaramanga</option>
+                          <option>Cali</option>
+                          <option>Cartagena</option>
+                          <option>Ibague</option>
+                          <option>Medellin</option>
+                          <option>Pasto</option>
+                          <option>Santa Marta</option>
+                          <option>Villavicencio</option>
+                          <option>Yopal</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="direccionTecHomePro" class="form-label">Dirección</label>
+                        <input type="text" id="direccionTecHomePro" class="form-control" placeholder="Ingrese la razón comercial de su negocio." required>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="barrioTecHomePro" class="form-label">Barrio</label>
+                        <input type="text" id="barrioTecHomePro" class="form-control" placeholder="Ingrese la razón comercial." required>
+                      </div>
+                      <div class="col-md-8">
+                        <label for="especialidadTecHomePro" class="form-label">Especialidad</label>
+                        <select id="especialidadTecHomePro" class="form-select">
+                          <option>Decoracion</option>
+                          <option>Electricidad</option>
+                          <option>Pintura</option>
+                          <option>Plomeria</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="experienciaTecHomePro" class="form-label">Experiencia</label>
+                        <input type="number" id="experienciaTecHomePro" class="form-control" placeholder="Ingrese los años de experiencia.">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="emailTecHomePro" class="form-label">Correo electrónico para registro</label>
+                        <input type="email" id="emailTecHomePro" class="form-control" placeholder="Ingrese su correo corporativo." required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="contrasenaTecHomePro" class="form-label">Contraseña</label>
+                        <input type="password" id="contrasenaTecHomePro" class="form-control" placeholder="Ingrese contraseña entre 6 y 8 caracteres." required>
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="terminosTecHomePro" onclick="verificarTerminosYCondiciones()">
+                          <label class="form-check-label" for="terminosTecHomePro"> Acepto términos y condiciones.</label>
+                        </div>
+                      </div>
+                    </div>
+                  <button type="submit" class="btn btn-primary" id="botonSubmit" disabled>Submit</button>
+                </fieldset>
+              </form>
+        </div>
+    </section>
+    <footer id="footer" style="background: #55B2E5; height: 100px;" class="d-flex flex-wrap justify-content-between align-items-center border-top">
+      <ul class="nav col-md-12 justify-content-center list-unstyled d-flex">
+        <li class="ms-3"></li>
+          <a class="text-muted" href="imagenes/">
+            <svg class="bi" width="24" height="24">
+              <image xlink:href="imagenes/bxl-instagram.svg"></image>
+            </svg>
+          </a>
+        <li class="ms-3"></li>
+          <a class="text-muted" href="imagenes/">
+            <svg class="bi" width="24" height="24">
+              <image xlink:href="imagenes/bxl-facebook-circle.svg"></image>
+            </svg>
+          </a>
+        <li class="ms-3"></li>
+          <a class="text-muted" href="imagenes/">
+            <svg class="bi" width="24" height="24">
+              <image xlink:href="imagenes/bxl-twitter.svg"></image>
+            </svg>
+          </a>
+    </footer>
+  <script> function verificarTerminosYCondiciones(){
+    document.getElementById("terminosTecHomePro").checked ? document.getElementById("botonSubmit").disabled = false : document.getElementById("botonSubmit").disabled = true;
+  } </script>
+</body>
+</html>
