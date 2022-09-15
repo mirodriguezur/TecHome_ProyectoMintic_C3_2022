@@ -1,0 +1,18 @@
+/* Este archivo css es para definir los estilos de la página HomeConsumidor.html*/
+
+#tituloPrincipal{ 
+    font-size: 35px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:darkslategray
+}
+
+#textoAnimo {
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:navy
+}
+
+#segundoPanel {
+    background: #98DBCF;
+    opacity: 0.90;
+}
