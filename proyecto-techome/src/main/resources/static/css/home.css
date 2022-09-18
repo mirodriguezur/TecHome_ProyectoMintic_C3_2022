@@ -14,3 +14,11 @@ border-radius: 8px;
 
     text-align: justify;
 }
+
+.footer {
+    background-color: #55B2E5;
+    text-align: center;
+}
+.body {
+    overflow-x: hidden;
+}
