@@ -1,0 +1,16 @@
+.img-home {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+
+}
+
+.content-text {
+background-color: #98DBCF;
+border-radius: 8px;
+}
+
+.texto {
+
+    text-align: justify;
+}
