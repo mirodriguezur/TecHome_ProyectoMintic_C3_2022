@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Nuevos Consumidores</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <img
+                src="imagenes/TecHomeLogo.png"
+                alt="Logo TecHome"
+            />
+        </figure>
+    </header>
+    <section style="margin: 1em;">
+        <div class = "container p-3" style="border: 2px solid rgb(119, 172, 247)">
+            <h1 style="text-align:center">Registro Consumidores TecHome</h1>
+            <form>
+                <fieldset enabled>                                                               
+                  <legend>Ingrese la información requerida para solicitar ingreso.</legend>
+                    <div class="row g-3 align-items-center">
+                      <div class="col-md-6">
+                        <label for="pNombreConsumidorTecHomePro" class="form-label">Primer Nombre</label>
+                        <input type="text" id="pNombreConsumidorTecHomePro" class="form-control" placeholder="Ingrese primer nombre" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="sNombreConsumidorTecHomePro" class="form-label">Segundo Nombre</label>
+                        <input type="text" id="sNombreConsumidorTecHomePro" class="form-control" placeholder="Ingrese segundo nombre">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="pApellidoConsumidorTecHomePro" class="form-label">Primer Apellido</label>
+                        <input type="text" id="pApellidoConsumidorTecHomePro" class="form-control" placeholder="Ingrese primer apellido" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="sApellidoConsumidorTecHomePro" class="form-label">Segundo Apellido</label>
+                        <input type="text" id="sApellidoConsumidorTecHomePro" class="form-control" placeholder="Ingrese segundo apellido">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="cedulaConsumidorTecHomePro" class="form-label">Cedula</label>
+                        <input type="number" id="cedulaConsumidorTecHomePro" class="form-control" placeholder="Ingrese número de cedula" required>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="celularConsumidorTecHomePro" class="form-label">Número celular</label>
+                        <input type="number" id="celularConsumidorTecHomePro" class="form-control" placeholder="Ingrese número celular sin espacios" required>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="telefonoConsumidorTecHomePro" class="form-label">Telefono</label>
+                        <input type="number" id="telefonoConsumidorTecHomePro" class="form-control" placeholder="Ingrese número telefonico sin espacios" required>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="ciudadConsumidorTecHomePro" class="form-label">Ciudad</label>
+                        <select id="ciudadConsumidorTecHomePro" class="form-select">
+                          <option>Bogota</option>
+                          <option>Bucaramanga</option>
+                          <option>Cali</option>
+                          <option>Cartagena</option>
+                          <option>Ibague</option>
+                          <option>Medellin</option>
+                          <option>Pasto</option>
+                          <option>Santa Marta</option>
+                          <option>Villavicencio</option>
+                          <option>Yopal</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="direccionConsumidorTecHomePro" class="form-label">Dirección</label>
+                        <input type="text" id="direccionConsumidorTecHomePro" class="form-control" placeholder="Ingrese su dirección." required>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="barrioConsumidorTecHomePro" class="form-label">Barrio</label>
+                        <input type="text" id="barrioConsumidorTecHomePro" class="form-control" placeholder="Ingrese nombre del barrio." required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="emailConsumidorTecHomePro" class="form-label">Correo electrónico</label>
+                        <input type="email" id="emailConsumidorTecHomePro" class="form-control" placeholder="Ingrese su correo electronico." required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="contrasenaConsumidorTecHomePro" class="form-label">Contraseña</label>
+                        <input type="password" id="contrasenaConsumidorTecHomePro" class="form-control" placeholder="Ingrese contraseña entre 6 y 8 caracteres." required>
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="terminosTecHomePro" onclick="verificarTerminosYCondiciones()">
+                          <label class="form-check-label" for="terminosTecHomePro"> Acepto términos y condiciones.</label>
+                        </div>
+                      </div>
+                    </div>
+                  <button type="submit" class="btn btn-primary" id="botonSubmit" disabled>Submit</button>
+                </fieldset>
+              </form>
+        </div>
+    </section>
+    <footer id="footer" style="background: #55B2E5; height: 100px;" class="d-flex flex-wrap justify-content-between align-items-center border-top">
+      <ul class="nav col-md-12 justify-content-center list-unstyled d-flex">
+        <li class="ms-3"></li>
+          <a class="text-muted" href="imagenes/">
+            <svg class="bi" width="24" height="24">
+              <image xlink:href="imagenes/bxl-instagram.svg"></image>
+            </svg>
+          </a>
+        <li class="ms-3"></li>
+          <a class="text-muted" href="imagenes/">
+            <svg class="bi" width="24" height="24">
+              <image xlink:href="imagenes/bxl-facebook-circle.svg"></image>
+            </svg>
+          </a>
+        <li class="ms-3"></li>
+          <a class="text-muted" href="imagenes/">
+            <svg class="bi" width="24" height="24">
+              <image xlink:href="imagenes/bxl-twitter.svg"></image>
+            </svg>
+          </a>
+    </footer>
+  <script> function verificarTerminosYCondiciones(){
+    document.getElementById("terminosTecHomePro").checked ? document.getElementById("botonSubmit").disabled = false : document.getElementById("botonSubmit").disabled = true;
+  } </script>
+</body>
+</html>
+
+    
