@@ -6,19 +6,50 @@
 }
 
 .content-text {
-background-color: #98DBCF;
-border-radius: 8px;
+    background-color: #98DBCF;
+    border-radius: 8px;
+    align-self: center;
+    padding: 41px;
+    text-align: center;
 }
 
-.texto {
 
-    text-align: justify;
-}
 
 .footer {
     background-color: #55B2E5;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
+
 .body {
     overflow-x: hidden;
+}
+
+.titulo {
+
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkslategray
+}
+
+
+@media (max-width: 320px) {
+
+    .footer {
+        position: relative;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .footer {
+        height: 100px;
+    }
+
+    .content-home {
+        margin-top: 10rem !important;
+    }
 }
