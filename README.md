@@ -7,6 +7,7 @@ TecHome en una empresa que presta servicios para conectar propietarios de casas/
 Proyecto conformado por:
 
 * Nataly Paola Mendoza Olivero
-* Francisco Arturo Castillo Fajardo
 * Laura Catalina Caceres Torres
 * Michael Alexander Rodriguez Urbina
+* Brayan Stid Rodriguez Urbina
+* Jonathan Alejandro Imues Mazo
