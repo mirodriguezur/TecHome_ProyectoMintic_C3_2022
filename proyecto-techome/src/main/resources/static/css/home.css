@@ -13,16 +13,6 @@
     text-align: center;
 }
 
-
-
-.footer {
-    background-color: #55B2E5;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
 .body {
     overflow-x: hidden;
 }
