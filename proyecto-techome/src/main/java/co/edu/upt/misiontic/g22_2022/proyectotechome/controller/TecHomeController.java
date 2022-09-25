@@ -28,4 +28,9 @@ public class TecHomeController {
     public String goToRegistronuevostecnicos(Model model){
         return "registronuevostecnicos";
     }
+
+    @GetMapping("/registronuevosconsumidores")
+    public String goToRegistronuevosConsumidores(Model model){
+        return "registronuevosconsumidores"; 
+    }
 }
