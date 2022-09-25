@@ -11,11 +11,21 @@ public class TecHomeController {
 
     @GetMapping("/homeconsumidor")
     public String goToHomeConsumidor(Model model){
-        return "/proyecto-techome/src/main/resources/templates/HomeConsumidor";
+        return "/homeconsumidor";
     }
 
     @GetMapping("/iniciotechomepro")
     public String goToInicioTecHomePro(Model model){
         return "iniciotechomepro";
+    }
+
+    @GetMapping("/login")
+    public String goToLogin(Model model){
+        return "login";
+    }
+
+    @GetMapping("/registronuevostecnicos")
+    public String goToRegistronuevostecnicos(Model model){
+        return "registronuevostecnicos";
     }
 }
