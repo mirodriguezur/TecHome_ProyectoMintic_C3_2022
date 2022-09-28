@@ -21,6 +21,8 @@ public class TecnicoResponse {                  //La información que me devuelv
 
     private String email;
 
+    private String especialidad;
+
     private Integer experiencia;
 
     private Boolean esTecnico;

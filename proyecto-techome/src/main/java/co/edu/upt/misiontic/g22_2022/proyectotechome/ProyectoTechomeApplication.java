@@ -25,7 +25,8 @@ public class ProyectoTechomeApplication {
 
 		@Override
 		public void run(String... args) throws Exception {
-			// TODO Auto-generated method stub
+			//Descomentar métodos para probar funcionalidad del backend.
+			//loadUsers();
 
 		}
 

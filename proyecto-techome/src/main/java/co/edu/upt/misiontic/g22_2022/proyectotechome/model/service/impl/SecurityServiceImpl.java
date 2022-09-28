@@ -22,7 +22,7 @@ public class SecurityServiceImpl implements SecurityService {               //Lo
 
     @Override
     public ConsumidorResponse validarConsumidor(String correo, String password) {
-        var consumidorOp = consumidorRepository.findByEmailAndPasswordAndActiveIsTrue(correo, password);
+        var consumidorOp = consumidorRepository.findByEmailAndPasswordAndActivoIsTrue(correo, password);
         if (consumidorOp.isEmpty()) {
             throw new RuntimeException("Credenciales inválidas");
         }
@@ -41,7 +41,7 @@ public class SecurityServiceImpl implements SecurityService {               //Lo
 
     @Override
     public TecnicoResponse validarTecnico(String correo, String password) {
-        var tecnicoOp =  tecnicoRepository.findByEmailAndPasswordAndActiveIsTrue(correo, password);
+        var tecnicoOp =  tecnicoRepository.findByEmailAndPasswordAndActivoIsTrue(correo, password);
         if (tecnicoOp.isEmpty()) {
             throw new RuntimeException("Credenciales inválidas");
         }
@@ -52,7 +52,9 @@ public class SecurityServiceImpl implements SecurityService {               //Lo
                 .primerApellido(tecnico.getPrimerApellido())
                 .celular(tecnico.getCelular())
                 .ciudad(tecnico.getCiudad())
+                .barrio(tecnico.getBarrio())
                 .email(tecnico.getEmail())
+                .especialidad(tecnico.getEspecialidad())
                 .experiencia(tecnico.getExperiencia())
                 .esTecnico(tecnico.getEsTecnico())
                 .build();                                               //Para terminar de construir el objeto.
