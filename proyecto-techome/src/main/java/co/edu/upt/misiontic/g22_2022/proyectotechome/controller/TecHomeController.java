@@ -33,4 +33,14 @@ public class TecHomeController {
     public String goToRegistronuevosConsumidores(Model model){
         return "registronuevosconsumidores"; 
     }
+
+    @GetMapping("/oportunidadesnegocio")
+    public String goToOportunidadesNegocio(Model model){
+        return "oportunidadesnegocio"; 
+    }
+
+    @GetMapping(value = { "/", "/index", "/index.html" })
+     public String goToIndex(Model model) {
+         return "index";
+     }
 }

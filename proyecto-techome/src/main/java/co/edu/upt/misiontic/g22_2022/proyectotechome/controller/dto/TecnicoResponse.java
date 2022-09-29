@@ -25,5 +25,6 @@ public class TecnicoResponse {                  //La información que me devuelv
 
     private Integer experiencia;
 
-    private Boolean esTecnico;
+    @Builder.Default
+    private Boolean esTecnico = true;
 }

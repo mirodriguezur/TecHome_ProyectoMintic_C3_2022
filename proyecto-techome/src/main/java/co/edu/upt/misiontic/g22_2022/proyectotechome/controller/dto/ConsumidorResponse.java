@@ -20,5 +20,6 @@ public class ConsumidorResponse {
 
     private String email;
 
-    private Boolean esTecnico;
+    @Builder.Default
+    private Boolean esTecnico = false;
 }

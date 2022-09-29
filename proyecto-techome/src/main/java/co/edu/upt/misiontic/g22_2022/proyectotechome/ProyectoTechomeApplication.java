@@ -26,7 +26,7 @@ public class ProyectoTechomeApplication {
 		@Override
 		public void run(String... args) throws Exception {
 			//Descomentar métodos para probar funcionalidad del backend.
-			//loadUsers();
+			loadUsers();
 
 		}
 
