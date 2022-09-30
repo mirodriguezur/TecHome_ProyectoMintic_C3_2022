@@ -20,41 +20,41 @@
     <section style="margin: 1em;">
         <div class = "container p-3" style="border: 2px solid rgb(119, 172, 247)">
             <h1 style="text-align:center">Registro TecHomePro</h1>
-            <form>
+            <form method="post" action="/registronuevostecnicos/registro" role="form" id ="registroTecncios" name="registro-tecnicos"> 
                 <fieldset enabled>                                                               <!--Habilita los texts fields-->
                   <legend>Ingrese la información requerida para solicitar ingreso.</legend>
                     <div class="row g-3 align-items-center">
                       <div class="col-md-6">
                         <label for="pNombreTecHomePro" class="form-label">Primer Nombre</label>
-                        <input type="text" id="pNombreTecHomePro" class="form-control" placeholder="Ingrese nombre primer nombre" required>
+                        <input type="text" id="pNombreTecHomePro" class="form-control" name="primerNombre" placeholder="Ingrese nombre primer nombre" required>
                       </div>
                       <div class="col-md-6">
                         <label for="sNombreTecHomePro" class="form-label">Segundo Nombre</label>
-                        <input type="text" id="sNombreTecHomePro" class="form-control" placeholder="Ingrese segundo nombre">
+                        <input type="text" id="sNombreTecHomePro" class="form-control" name="segundoNombre" placeholder="Ingrese segundo nombre">
                       </div>
                       <div class="col-md-6">
                         <label for="pApellidoTecHomePro" class="form-label">Primer Apellido</label>
-                        <input type="text" id="pApellidoTecHomePro" class="form-control" placeholder="Ingrese primer apellido" required>
+                        <input type="text" id="pApellidoTecHomePro" class="form-control" name="primerApellido" placeholder="Ingrese primer apellido" required>
                       </div>
                       <div class="col-md-6">
                         <label for="sApellidoTecHomePro" class="form-label">Segundo Apellido</label>
-                        <input type="text" id="sApellidoTecHomePro" class="form-control" placeholder="Ingrese segundo apellido">
+                        <input type="text" id="sApellidoTecHomePro" class="form-control" name="segundoApellido" placeholder="Ingrese segundo apellido">
                       </div>
                       <div class="col-md-6">
                         <label for="cedulaTecHomePro" class="form-label">Cedula</label>
-                        <input type="number" id="cedulaTecHomePro" class="form-control" placeholder="Ingrese número de cedula" required>
+                        <input type="number" id="cedulaTecHomePro" class="form-control" name="cedulaTecnico" placeholder="Ingrese número de cedula" required>
                       </div>
                       <div class="col-md-6">
                         <label for="celularTecHomePro" class="form-label">Número celular</label>
-                        <input type="number" id="celularTecHomePro" class="form-control" placeholder="Ingrese número celular sin espacios" required>
+                        <input type="number" id="celularTecHomePro" class="form-control" name="celularTecnico" placeholder="Ingrese número celular sin espacios" required>
                       </div>
                       <div class="mb-3">
                         <label for="razonSocialTecHomePro" class="form-label">Nombre razón comercial</label>
-                        <input type="text" id="razonSocialTecHomePro" class="form-control" placeholder="Ingrese la razón comercial de su negocio." required>
+                        <input type="text" id="razonSocialTecHomePro" class="form-control" name="razonSocial" placeholder="Ingrese la razón comercial de su negocio." required>
                       </div>
                       <div class="col-md-4">
                         <label for="ciudadTecHomePro" class="form-label">Ciudad</label>
-                        <select id="ciudadTecHomePro" class="form-select">
+                        <select id="ciudadTecHomePro" class="form-select" name="ciudadTecnico">
                           <option>Bogota</option>
                           <option>Bucaramanga</option>
                           <option>Cali</option>
@@ -69,15 +69,15 @@
                       </div>
                       <div class="col-md-4">
                         <label for="direccionTecHomePro" class="form-label">Dirección</label>
-                        <input type="text" id="direccionTecHomePro" class="form-control" placeholder="Ingrese la razón comercial de su negocio." required>
+                        <input type="text" id="direccionTecHomePro" class="form-control" name="direccionTecnico" placeholder="Ingrese la razón comercial de su negocio." required>
                       </div>
                       <div class="col-md-4">
                         <label for="barrioTecHomePro" class="form-label">Barrio</label>
-                        <input type="text" id="barrioTecHomePro" class="form-control" placeholder="Ingrese la razón comercial." required>
+                        <input type="text" id="barrioTecHomePro" class="form-control" name="barrioTecnico" placeholder="Ingrese la razón comercial." required>
                       </div>
                       <div class="col-md-8">
                         <label for="especialidadTecHomePro" class="form-label">Especialidad</label>
-                        <select id="especialidadTecHomePro" class="form-select">
+                        <select id="especialidadTecHomePro" class="form-select" name="especialidad">
                           <option>Decoracion</option>
                           <option>Electricidad</option>
                           <option>Pintura</option>
@@ -86,15 +86,15 @@
                       </div>
                       <div class="col-md-4">
                         <label for="experienciaTecHomePro" class="form-label">Experiencia</label>
-                        <input type="number" id="experienciaTecHomePro" class="form-control" placeholder="Ingrese los años de experiencia.">
+                        <input type="number" id="experienciaTecHomePro" class="form-control" name="experiencia" placeholder="Ingrese los años de experiencia.">
                       </div>
                       <div class="col-md-6">
                         <label for="emailTecHomePro" class="form-label">Correo electrónico para registro</label>
-                        <input type="email" id="emailTecHomePro" class="form-control" placeholder="Ingrese su correo corporativo." required>
+                        <input type="email" id="emailTecHomePro" class="form-control" name="emailTecnico" placeholder="Ingrese su correo corporativo." required>
                       </div>
                       <div class="col-md-6">
                         <label for="contrasenaTecHomePro" class="form-label">Contraseña</label>
-                        <input type="password" id="contrasenaTecHomePro" class="form-control" placeholder="Ingrese contraseña entre 6 y 8 caracteres." required>
+                        <input type="password" id="contrasenaTecHomePro" class="form-control" name="password" placeholder="Ingrese contraseña entre 6 y 8 caracteres." required>
                       </div>
                       <div class="mb-3">
                         <div class="form-check">
