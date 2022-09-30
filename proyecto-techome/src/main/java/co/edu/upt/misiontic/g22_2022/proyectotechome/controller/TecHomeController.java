@@ -33,4 +33,12 @@ public class TecHomeController {
     public String goToRegistronuevosConsumidores(Model model){
         return "registronuevosconsumidores"; 
     }
+
+    @GetMapping("/oportunidadesnegocio")
+    public String goToOportunidadesNegocio(Model model){
+        return "oportunidadesnegocio"; 
+    }
+
+    //TODO: Implementar inicio del consumer
+
 }
