@@ -68,7 +68,7 @@ public class SecurityServiceImpl implements SecurityService {               //Lo
         }
 
         var consumidorDb = new Consumidor();                                       //Creo un nuevo consumidor.
-        consumidorDb.setCedula(consumidor.getCedula());
+        consumidorDb.setCedulaConsumidor(consumidor.getCedula());
         consumidorDb.setPrimerNombre(consumidor.getPrimerNombre());
         consumidorDb.setSegundoNombre(consumidor.getSegundoNombre());
         consumidorDb.setPrimerApellido(consumidor.getPrimerApellido());
@@ -90,7 +90,7 @@ public class SecurityServiceImpl implements SecurityService {               //Lo
         }
 
         var tecnicoDb = new Tecnico();
-        tecnicoDb.setCedula(tecnico.getCedula());                                   //Creo un nuevo tecnico.
+        tecnicoDb.setCedulaTecnico(tecnico.getCedula());                                   //Creo un nuevo tecnico.
         tecnicoDb.setPrimerNombre(tecnico.getPrimerNombre());
         tecnicoDb.setSegundoNombre(tecnico.getSegundoNombre());
         tecnicoDb.setPrimerApellido(tecnico.getPrimerApellido());

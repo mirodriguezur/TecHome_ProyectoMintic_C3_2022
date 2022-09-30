@@ -39,8 +39,6 @@ public class TecHomeController {
         return "oportunidadesnegocio"; 
     }
 
-    @GetMapping(value = { "/", "/index", "/index.html" })
-     public String goToIndex(Model model) {
-         return "index";
-     }
+    //TODO: Implementar inicio del consumer
+
 }

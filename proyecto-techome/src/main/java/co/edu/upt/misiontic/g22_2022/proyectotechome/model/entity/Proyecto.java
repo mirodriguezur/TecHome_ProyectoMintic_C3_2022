@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -17,8 +19,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor                                     // para que sea capaz de traer los datos de la base de datos, y crear un objeto en JAVA... 
 @NoArgsConstructor                                      //...necesito un constructor vacio, y que todos los atributos tengan getters y setters. 
 public class Proyecto {
-    //TODO: Mapear relaciones entre clases
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_proyecto", nullable = false)
@@ -35,4 +35,12 @@ public class Proyecto {
 
     @Column(name = "tiempo_entrega", nullable = false)
     private Integer tiempoEntrega;
+
+    @ManyToOne                                          //Se mapea el tipo de relacion entre la tabla proyecto y consumidor
+    @JoinColumn(name = "cedula_consumidor")
+    private Consumidor consumidor;
+
+    //@ManyToOne                                          //Se mapea el tipo de relacion entre la tabla proyecto y tecnico.
+    //@JoinColumn(name = "cedula_tecnico")
+    //private Tecnico tecnico;
 }

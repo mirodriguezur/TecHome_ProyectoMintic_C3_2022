@@ -1,8 +1,11 @@
 package co.edu.upt.misiontic.g22_2022.proyectotechome.model.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -15,10 +18,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor                                     // para que sea capaz de traer los datos de la base de datos, y crear un objeto en JAVA... 
 @NoArgsConstructor                                      //...necesito un constructor vacio, y que todos los atributos tengan getters y setters. 
 public class Consumidor {
-    //TODO: Mapear relaciones entre clases
-
     @Id
-    private Integer cedula;
+    @Column(name = "cedula_consumidor")
+    private Integer cedulaConsumidor;
 
     @Column(name = "primer_nomber", nullable = false)
     private String primerNombre;
@@ -55,4 +57,7 @@ public class Consumidor {
 
     @Column(nullable = false)
     private Boolean esTecnico;
+
+    @OneToMany(mappedBy ="consumidor")              //Se mapea la relacion entre consumidor y proyecto.
+    private List<Proyecto> proyecto;
 }

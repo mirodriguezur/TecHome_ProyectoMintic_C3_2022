@@ -15,10 +15,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor                                     // para que sea capaz de traer los datos de la base de datos, y crear un objeto en JAVA... 
 @NoArgsConstructor                                      //...necesito un constructor vacio, y que todos los atributos tengan getters y setters. 
 public class Tecnico {
-    //TODO: Mapear relaciones entre clases
-
     @Id
-    private Integer cedula;
+    @Column(name = "cedula_tecnico")
+    private Integer cedulaTecnico;
 
     @Column(name = "primer_nomber", nullable = false)
     private String primerNombre;
@@ -64,4 +63,7 @@ public class Tecnico {
 
     @Column(nullable = false)
     private Boolean esTecnico;
+
+    //@OneToMany(mappedBy ="tecnico")              //Se mapea la relacion entre tecnico y proyecto.
+    //private List<Proyecto> proyecto;
 }
