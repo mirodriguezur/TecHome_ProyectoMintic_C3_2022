@@ -22,13 +22,25 @@
                                     <image width="100%" height="100%" xlink:href="/imagenes/Logotechomeblanco.png"></image>                                      
                                   </svg><br><br><br>                                
                                 <div class="flex-column border-top-0">
-                                    <input id="txtUser" type="text" class="form-control" formname="Usuario" placeholder="Usuario"> <br>
-                                    <input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Contraseña"> <br>  
-                                    <button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Inciar Sesión</button> <br><br>                           
+                                    <input id="txtemail" type="email" class="form-control" formname="email" placeholder="Correo electrónico"> <br>
+                                    <input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Contraseña"> <br> 
+                                    <div class="row g-sm-1">
+                                      <div class="form-check col-md-6 ">
+                                        <input class="form-check-input" type="checkbox" id = "consumidor" name="soy consumidor" value ="consumidor" checked>
+                                        <label class="form-check-label" for="consumer">Soy consumidor.</label>
+                                      </div>
+                                      <div class="form-check col-md-6 ">
+                                        <input class="form-check-input" type="checkbox" id = "tecnico" name="soy tecnico" value ="tecnico">
+                                        <label class="form-check-label" for="technical">Soy técnico.</label><br>
+                                      </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-block login-button" type="submit" onclick="login()"><i class="fa fa-sign-in"></i> Iniciar Sesión</button> <br><br>                           
                                 </div>
                                 <div class="checkbox login-options">
-					                <label><input type="checkbox"/> Recuérdame</label>
-					                <a href="#" class="login-forgot"style="padding-left: 50px;">¿Haz olvidado tu contraseña?</a>
+					                        <label><input type="checkbox"/> Recuérdame</label>
+					                        <a href="#" class="login-forgot"style="padding-left: 50px;">¿Haz olvidado tu contraseña?</a>
+                                </div>
+                                <div id="errorBox">
                                 </div>
                             </div>
                         </div>
@@ -61,5 +73,6 @@
               </footer>
         </div>
     </main>
+    <script src="/js/login.js"></script>
 </body>
 </html>
