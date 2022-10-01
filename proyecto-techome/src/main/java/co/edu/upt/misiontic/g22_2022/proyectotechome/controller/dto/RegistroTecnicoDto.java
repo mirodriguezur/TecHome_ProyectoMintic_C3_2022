@@ -1,3 +1,5 @@
+//Esta clase se crea para recibir informacion del formulario del HTML, para ello los atributos 
+//se nombran iguan que la propiedad name de cada texfield del formulario html.
 package co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto;
 
 import lombok.Data;

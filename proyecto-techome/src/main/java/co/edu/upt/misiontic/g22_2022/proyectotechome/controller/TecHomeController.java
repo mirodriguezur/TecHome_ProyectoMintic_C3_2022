@@ -56,6 +56,16 @@ public class TecHomeController {
         return "proyectosconsumidor"; 
     }
 
+    @GetMapping("/logouttecnico")
+    public String goToHomeAfterLogoutTecnico(Model model){
+        return "iniciotechomepro"; 
+    }
+
+    @GetMapping("/logoutconsumidor")
+    public String goToHomeAfterLogoutConsumidor(Model model){
+        return "homeconsumidor"; 
+    }
+
     @PostMapping("/registronuevostecnicos/registro")
     public String postRegistroTecnicos(@ModelAttribute RegistroTecnicoDto tecnicoInfo, Model model) {  //@ModelAttribute recibe la informacion de un formulario HTML
         log.info(tecnicoInfo.toString());
@@ -65,8 +75,6 @@ public class TecHomeController {
         model.addAttribute("tecnicoInfo", tecnicoInfo); //thymeleaf obtiene todo el objeto, y puedo hacer uso de cualquier propiedad del objeto dentro de la plantilla oportunidadesnegocio
         return "oportunidadesnegocio";                                 //Me direcciona finalmente a la plantilla oportunidadesnegocio
      }
-
-     //TODO: Implementar envio de formulario del consumer (descomentar e implementar)
 
     @PostMapping("/registronuevosconsumidores/registro")
     public String postRegistroConsumidores(@ModelAttribute RegistroConsumidorDto consumidorInfo, Model model) {  //@ModelAttribute recibe la informacion de un formulario HTML
