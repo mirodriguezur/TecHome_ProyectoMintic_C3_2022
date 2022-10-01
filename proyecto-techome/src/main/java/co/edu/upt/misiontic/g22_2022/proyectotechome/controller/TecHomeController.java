@@ -52,6 +52,11 @@ public class TecHomeController {
 
     //TODO: Implementar inicio del consumer
 
+    @GetMapping("/proyectosconsumidor")
+    public String goToProyectosConsumidor(Model model){
+        return "proyectosconsumidor"; 
+    }
+
     @PostMapping("/registronuevostecnicos/registro")
     public String postRegistroTecnicos(@ModelAttribute RegistroTecnicoDto tecnicoInfo, Model model) {  //@ModelAttribute recibe la informacion de un formulario HTML
         log.info(tecnicoInfo.toString());

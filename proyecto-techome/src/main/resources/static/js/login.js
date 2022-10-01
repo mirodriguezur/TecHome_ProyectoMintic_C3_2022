@@ -39,13 +39,11 @@ const postToLogin = async (bodyObject) => {     //metodo asíncrono
 
         await new Promise(r => setTimeout(r, 2000));
 
-        //TODO: Revisar que sea un consumidor o un tecnico y dirigirlos a la pantalla correspondiente.
-
         if(user.esTecnico){
-            window.location.href = "/oportunidadesnegocio";
+            window.location.href = "/oportunidadesnegocio";     //Si es tecnico lo direccionará a la página oportunidadesnegocio
         } 
         else {
-            window.location.href = "/";  //TODO: colocar aqui la pagina de nataly.
+            window.location.href = "/proyectosconsumidor";      //Si es consumidor, lo direccionará a la página proyectosconsumidor
         }
 
         
