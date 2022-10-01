@@ -1,5 +1,6 @@
 package co.edu.upt.misiontic.g22_2022.proyectotechome.model.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -59,5 +60,5 @@ public class Consumidor {
     private Boolean esTecnico;
 
     @OneToMany(mappedBy ="consumidor")              //Se mapea la relacion entre consumidor y proyecto.
-    private List<Proyecto> proyecto;
+    private List<Proyecto> proyectos;
 }
