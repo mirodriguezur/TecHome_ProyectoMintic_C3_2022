@@ -1,6 +1,5 @@
 package co.edu.upt.misiontic.g22_2022.proyectotechome.model.entity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;

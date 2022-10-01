@@ -34,7 +34,7 @@ const postToLogin = async (bodyObject) => {     //metodo asíncrono
         const user = await response.json();     //el metodo .json() es una promesa, por eso lo espero con await.
 
         localStorage.setItem("loggedUser", JSON.stringify(user)); //permite guardar la informacion del login en la cache del navegador. (funciona parecido a un diccionario)
-
+        
         alert("Bienvenido "+user.primerNombre+" "+user.primerApellido+"!", "success");
 
         await new Promise(r => setTimeout(r, 2000));
