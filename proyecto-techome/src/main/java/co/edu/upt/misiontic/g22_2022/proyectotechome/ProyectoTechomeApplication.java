@@ -34,7 +34,7 @@ public class ProyectoTechomeApplication {
 		public void run(String... args) throws Exception {
 			//Descomentar métodos para probar funcionalidad del backend.
 			loadTecnico();
-			//loadConsumidor();
+			loadConsumidor();
 
 		}
 
@@ -49,7 +49,7 @@ public class ProyectoTechomeApplication {
 			List<Proyecto> proyecto = new ArrayList<Proyecto>();
 			consumidorRepository.save(new Consumidor(1018999000, "Carlos", "Lorenzo", "Rodriguez", "Jimenez", 
 					304123940, "Bogota", "Calle 70 No. 00 - 10", "Las ferias", "anotheremail@gmail.com", 
-					"54321", true, true, proyecto));
+					"54321", true, false, proyecto));
 		}
 	}
 }
