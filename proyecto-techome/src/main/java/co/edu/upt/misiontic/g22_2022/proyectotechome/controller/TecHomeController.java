@@ -85,5 +85,4 @@ public class TecHomeController {
         model.addAttribute("consumidorInfo", consumidorInfo); //thymeleaf obtiene todo el objeto, y puedo hacer uso de cualquier propiedad del objeto dentro de la plantilla oportunidadesnegocio
         return "proyectosconsumidor";                                       //Me direcciona finalmente a la plantilla proyectosconsumidor
      }
-
 }

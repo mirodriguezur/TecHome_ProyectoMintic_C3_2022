@@ -12,6 +12,8 @@ public class ConsumidorResponse {
 
     private String primerApellido;
 
+    private Integer cedulaConsumidor;
+
     private Integer celular;
 
     private String ciudad;

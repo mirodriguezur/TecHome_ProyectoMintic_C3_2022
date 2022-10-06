@@ -28,6 +28,9 @@ public class Proyecto {
     private String nombreProyecto;
 
     @Column(nullable = false)
+    private String tipo;
+
+    @Column(nullable = false)
     private String descripcion;
 
     @Column(nullable = false)
