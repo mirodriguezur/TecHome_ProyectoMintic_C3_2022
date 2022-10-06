@@ -14,64 +14,62 @@
 </head>
 
 <body class="body">
-    <section class="row">
-        <section class="col-12 mt-3 home">
+    <div class = "container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+            <figure class="d-flex align-items-center mb-5 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img
+                    src="/imagenes/TecHomeLogo.png"
+                    alt="Logo TecHome"
+                />
+            </figure>
+            <ul class = "nav nav-pills">
+                <li class="nav-item">
+                    <button type="button" onclick="informacion()" value="Informacion de la página" class="btn btn-primary">información</button>
+                </li>
+                <li class="nav-item">
+                    <a onclick="logout()" href="/logoutconsumidor" class="nav-link" aria-current="page">Cerrar sesión</a>
+                </li>
+            </ul>
+        </header>
+    </div>
 
-            <section class="row px-sm-5 px-0">
-
-                <section class="col-12">
-                    <section class="row">
-                        <section class="col-sm-2 col-12 content-img">
-                            <img class="img-logo" src="./imagenes/TecHomeLogo.png" alt="logo">
-                        </section>
-                        <section class="col-sm-4 col-12 ">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected disabled>Nuevo Proyecto</option>
-                                <option value="1">Electricidad</option>
-                                <option value="2">Plomeria</option>
-                                <option value="3">pintura</option>
-                                <option value="3">Decoración</option>
-                            </select>
-                        </section>
-                        <section class="col-sm-3 col-6 mt-3 mt-sm-0">
-                            <button type="button" class="btn btn-outline-primary">
-                                Mis proyectos
-                            </button>
-                        </section>
-                        <section class="col-sm-3 col-6 text-end mt-3 mt-sm-0">
-                            <a onclick="logout()" href="/logoutconsumidor" class="nav-link" aria-current="page">
-                                Cerrar Sesión
-                            </a>
-                        </section>
-                    </section>
+    <section class="container p-5" style="border: 2px solid rgb(119, 172, 247)">
+        <!--<form method="post" action="/registronuevosproyectos" role="form" id ="nuevoProyectos" name="registroNuevosProyetos">-->
+        <form>
+            <div class="row">
+                <h1 style="text-align:center">NUEVO PROYECTO</h1>
+                <section class="mb-3 col-sm-10 col-12 offset-sm-1 offset-0">
+                    <select id="tipoProyectoConsumidor" class="form-select" aria-label="Default select example" name="tipoProyecto">
+                        <option selected disabled>Tipo de proyecto</option>
+                        <option value="Electricidad">Electricidad</option>
+                        <option value="Plomeria">Plomeria</option>
+                        <option value="Pintura">Pintura</option>
+                        <option value="Decoracion">Decoración</option>
+                    </select>
                 </section>
-            </section>
-        </section>
-    </section>
+                <div class="mb-3 col-sm-10 col-12 offset-sm-1 offset-0">
+                    <input placeholder="Nombre del proyecto" type="texto" class="form-control" id="nombre" name="nombreProyecto">
+                </div>
 
-    <section class="form mt-5">
-        <div class="row">
-            <div class="mb-3 col-sm-6 col-12 offset-sm-3 offset-0">
-                <input placeholder="Nombre del proyecto" type="texto" class="form-control" id="nombre">
-            </div>
+                <div class="mb-3 col-sm-10 col-12 offset-sm-1 offset-0">
+                    <input placeholder="Presupuesto" type="number" class="form-control" id="presupuesto" name="presupuestoProyecto">
+                </div>
 
-            <div class="mb-3 col-sm-6 col-12 offset-sm-3 offset-0">
-                <input placeholder="Descripción (200 caracteres)" type="texto" class="form-control" id="nombre">
-            </div>
+                <div class="mb-3 col-sm-10 col-12 offset-sm-1 offset-0">
+                    <input placeholder="Tiempo" type="number" class="form-control" id="tiempo" name="tiempoProyecto">
+                </div> 
 
-            <div class="mb-3 col-sm-6 col-12 offset-sm-3 offset-0">
-                <input placeholder="Presupuesto" type="texto" class="form-control" id="nombre">
-            </div>
+                <div class="mb-3 col-sm-10 col-12 offset-sm-1 offset-0">
+                    <textarea placeholder="Descripción (200 caracteres)" class="form-control" rows="6" id="descripcion" name="descripcionProyecto"></textarea>
+                </div>
 
-            <div class="col-sm-6 col-12 offset-sm-3 offset-0 mb-3">
-                 <input placeholder="Tiempo" type="texto" class="form-control" id="nombre">
-            </div> 
-            <div class="col-sm-6 col-12 offset-sm-3 offset-0 botton">
-                <button type="button" class="btn btn-dark">
-                    Crear proyecto
-                </button>
+                <div class="col-sm-6 col-12 offset-sm-1 offset-0 botton">
+                    <button type="submit" class="btn btn-dark" id="botonSubmit" onclick="crearProyecto()">
+                        Crear proyecto
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     </section>
 
     <section>

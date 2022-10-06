@@ -3,14 +3,18 @@ package co.edu.upt.misiontic.g22_2022.proyectotechome.model.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.tomcat.jni.ProcErrorCallback;
 import org.springframework.stereotype.Service;
 
+import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.ProyectoRequest;
+import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.ProyectoResponse;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.RegistroConsumidorDto;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.RegistroTecnicoDto;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.model.entity.Consumidor;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.model.entity.Proyecto;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.model.entity.Tecnico;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.model.repository.ConsumidorRepository;
+import co.edu.upt.misiontic.g22_2022.proyectotechome.model.repository.ProyectoRepository;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.model.repository.TecnicoRepository;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.model.service.ProjectService;
 import lombok.AllArgsConstructor;
@@ -21,6 +25,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     private final TecnicoRepository tecnicoRepository;                      
     private final ConsumidorRepository consumidorRepository;
+    private final ProyectoRepository proyectoRepository; 
 
     @Override
     public void crearConsumidor(RegistroConsumidorDto consumidor) {
@@ -76,6 +81,40 @@ public class ProjectServiceImpl implements ProjectService {
         tecnicoDb.setEsTecnico(true);
 
         tecnicoRepository.save(tecnicoDb);
+    }
+
+    @Override
+    public ProyectoResponse crearProyecto(ProyectoRequest proyecto) {
+        
+        var consumidorOp = consumidorRepository.findById(proyecto.getCedulaConsumidor());  //Para crear un proyecto, tengo que asociarle el usuaio que lo esta creando
+        if(consumidorOp.isEmpty()){
+            throw new RuntimeException("El consumidor no existe");
+        }
+        var proyectoDb = new Proyecto();
+        proyectoDb.setTipo(proyecto.getTipoProyecto());
+        proyectoDb.setNombreProyecto(proyecto.getNombreProyecto());
+        proyectoDb.setDescripcion(proyecto.getDescripcionProyecto());
+        proyectoDb.setPresupuesto(proyecto.getPresupuestoProyecto());
+        proyectoDb.setTiempoEntrega(proyecto.getTiempoProyecto());
+        proyectoDb.setConsumidor(consumidorOp.get());   //El .get es para desenvolver el opcional
+        proyectoDb = proyectoRepository.save(proyectoDb);
+
+        return getProyectoById(proyectoDb.getIdProyecto());
+    }
+
+    public ProyectoResponse getProyectoById(Integer id) {
+        var proyectoOp = proyectoRepository.findById(id);
+        if (proyectoOp.isEmpty()) {
+            throw new RuntimeException("El producto no existe");
+        }
+        var proyecto = proyectoOp.get();
+        return ProyectoResponse.builder()
+                .tipoProyecto(proyecto.getTipo())
+                .nombreProyecto(proyecto.getNombreProyecto())
+                .presupuestoProyecto(proyecto.getPresupuesto())
+                .tiempoProyecto(proyecto.getTiempoEntrega())
+                .descripcionProyecto(proyecto.getDescripcion())
+                .build();
     }
     
 }

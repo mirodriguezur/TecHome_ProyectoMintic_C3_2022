@@ -27,6 +27,7 @@ public class SecurityServiceImpl implements SecurityService {               //Lo
         return ConsumidorResponse.builder()                             //Devuelvo un objteo ConsumidorResponse con los estos datos.
                 .primerNombre(consumidor.getPrimerNombre())
                 .primerApellido(consumidor.getPrimerApellido())
+                .cedulaConsumidor(consumidor.getCedulaConsumidor())
                 .celular(consumidor.getCelular())
                 .ciudad(consumidor.getCiudad())
                 .barrio(consumidor.getBarrio())
