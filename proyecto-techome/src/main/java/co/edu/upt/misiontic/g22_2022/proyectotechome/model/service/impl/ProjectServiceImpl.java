@@ -2,10 +2,14 @@ package co.edu.upt.misiontic.g22_2022.proyectotechome.model.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.tomcat.jni.ProcErrorCallback;
 import org.springframework.stereotype.Service;
 
+import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.InfoOportunidadRequest;
+import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.InfoOportunidadResponse;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.ProyectoRequest;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.ProyectoResponse;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.RegistroConsumidorDto;
@@ -116,5 +120,46 @@ public class ProjectServiceImpl implements ProjectService {
                 .descripcionProyecto(proyecto.getDescripcion())
                 .build();
     }
+    
+    @Override
+    public List<InfoOportunidadResponse> consultarProyectos(InfoOportunidadRequest infoOportunidad) {
+        var  oportunidades = proyectoRepository.findAllByTipo(infoOportunidad.getCategoria());
+
+        var listadoOportunidades = oportunidades.stream()
+                    .map(oport -> InfoOportunidadResponse.builder()
+                    .nombreProyecto(oport.getNombreProyecto())
+                    .descripcion(oport.getDescripcion())
+                    .presupuesto(oport.getPresupuesto())
+                    .tiempo(oport.getTiempoEntrega())
+                    .build())
+                    .collect(Collectors.toList());
+
+        return listadoOportunidades;
+    }
+
+    /* Esta funcion es para hacer la consulta completa entre tablas, pero no he podido hacer que funcione.
+    @Override
+    public List<InfoOportunidadResponse> consultarProyectos(InfoOportunidadRequest infoOportunidad) {
+        var oportunidades = proyectoRepository.consultaOportunidades(infoOportunidad.getCategoria());
+        
+        for(Map<String, Object> map : oportunidades){
+            for(Map.Entry<String, Object> entry : map.entrySet()){
+                String key = entry.getKey();
+                 //Object value = entry.getValue();
+            }
+        }
+        List<InfoOportunidadResponse> listaOportunidades = new ArrayList<InfoOportunidadResponse>();
+
+        if (oportunidades.isEmpty()) {
+            throw new RuntimeException("No hay proyectos para su especialidad");
+        }
+         
+        for (Map<String,Object> i: oportunidades) {
+            listaOportunidades.add((InfoOportunidadResponse) i.values());
+        }
+        return oportunidades;
+        
+    }
+    */
     
 }
