@@ -42,7 +42,7 @@ public class ProyectoTechomeApplication {
 			//List<Proyecto> proyecto = new ArrayList<Proyecto>();
 			tecnicoRepository.save(new Tecnico(1014999999, "Pepito", "Alfonso",
 					"Gomez","Ramirez",305111111,"Electricos y Compañia","Bogota","Calle 70 No. 00 - 00", 
-					"Estrada", "Electricista", 5,"any@gmail.com", "123456",  true, true));
+					"Estrada", "Electricidad", 5,"any@gmail.com", "123456",  true, true));
 		}
 
 		private void  loadConsumidor() {

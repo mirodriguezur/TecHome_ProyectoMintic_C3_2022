@@ -34,7 +34,7 @@ const crearProyecto = () => {
 }
 
 const agregarProyecto = async (bodyObject) => {
-    const url = "api/project";
+    const url = "/api/project";
     const response = await fetch(url, {         //espera a que obtenga un response
         method: "POST",
         body: JSON.stringify(bodyObject),       //le paso la informacion necesari por el cuerpo por ser response.

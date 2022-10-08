@@ -73,7 +73,7 @@ public class TecHomeController {
         projectService.crearTecnico(tecnicoInfo);
 
         model.addAttribute("tecnicoInfo", tecnicoInfo); //thymeleaf obtiene todo el objeto, y puedo hacer uso de cualquier propiedad del objeto dentro de la plantilla oportunidadesnegocio
-        return "oportunidadesnegocio";                                 //Me direcciona finalmente a la plantilla oportunidadesnegocio
+        return "iniciotechomepro";                                  //Me direcciona a la plantilla de inicio del tecnico.
      }
 
     @PostMapping("/registronuevosconsumidores/registro")
@@ -83,6 +83,6 @@ public class TecHomeController {
         projectService.crearConsumidor(consumidorInfo);
 
         model.addAttribute("consumidorInfo", consumidorInfo); //thymeleaf obtiene todo el objeto, y puedo hacer uso de cualquier propiedad del objeto dentro de la plantilla oportunidadesnegocio
-        return "proyectosconsumidor";                                       //Me direcciona finalmente a la plantilla proyectosconsumidor
+        return "homeconsumidor";                                    //Me direcciona a la plantilla de inicio del consumidor.
      }
 }

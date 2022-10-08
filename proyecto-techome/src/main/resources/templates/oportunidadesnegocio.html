@@ -22,6 +22,9 @@
                     <button type="button" onclick="informacion()" value="Informacion de la página" class="btn btn-primary">información</button>
                 </li>
                 <li class="nav-item">
+                    <button type="submit" onclick="consultar()" value="consultarProyectos" class="nav-link">Consultar</button>
+                </li>
+                <li class="nav-item">
                     <a onclick="logout()" href="/logouttecnico" class="nav-link" aria-current="page">Cerrar sesión</a>
                 </li>
             </ul>
@@ -30,6 +33,19 @@
     <section style="margin: 1em;">
         <h1 style="text-align:center">OPORTUNIDADES DE NEGOCIOS</h1>
         <div class = "container p-3 vh-100" style="border: 2px solid rgb(119, 172, 247)" alt="Max-width 100%">
+            <div class="list-group list-group-flush border-bottom scrollarea" id="body-table">
+                <!--
+                <a th:each="oportunidad: ${oportunidad}" href="#" class="list-group-item list-group-item-action py-3 lh-tigh">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong th:text="${oportunidad.nombreProyecto}" class="mb-1">.</strong>
+                        <small th:text="${oportunidad.presupuesto}" class="text-muted">.</small>
+                    </div>
+                    <div th:text="${oportunidad.descripcion}" class="col-10 mb-1 small">.</div>
+                </a>
+                -->
+                <a data-id="field">
+                </a>
+            </div>     
         </div>
     </section>
     <footer class="col-12 footer mt-3">
