@@ -2,10 +2,8 @@ package co.edu.upt.misiontic.g22_2022.proyectotechome.model.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.apache.tomcat.jni.ProcErrorCallback;
 import org.springframework.stereotype.Service;
 
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.InfoOportunidadRequest;

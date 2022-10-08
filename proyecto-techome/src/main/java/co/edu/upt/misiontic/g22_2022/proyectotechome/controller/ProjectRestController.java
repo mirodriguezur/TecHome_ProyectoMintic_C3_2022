@@ -1,13 +1,9 @@
 package co.edu.upt.misiontic.g22_2022.proyectotechome.controller;
 
-import java.util.Arrays;
-import java.util.List;
+
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.ProyectoRequest;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.InfoOportunidadRequest;
-import co.edu.upt.misiontic.g22_2022.proyectotechome.controller.dto.InfoOportunidadResponse;
 import co.edu.upt.misiontic.g22_2022.proyectotechome.model.service.ProjectService;
 import lombok.AllArgsConstructor;
 
